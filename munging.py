@@ -1,3 +1,8 @@
+# this is like a notebook of my code during data munging and is not a complete code to follow
+# will soon create a ipython notebook and upload it here for you to be able to follow the recipes of my process
+
+
+
 data = pd.read_csv('data.csv')
 
 #clean minutes 
@@ -7,8 +12,7 @@ clean = int(number)
 print number
 
 
-data.genres = data.genres.str.replace('[', '')
-data.genres = data.genres.str.replace(']', '')
+data.genres = data.genres.str.replace('[', '').str.replace(']','')
 
 genres = set()
 for m in data.genres: 
